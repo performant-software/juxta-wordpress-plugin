@@ -59,13 +59,12 @@ class Juxta {
     		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
     	}
         
-        if( isset($_POST[ 'submitted' ]) && $_POST[ 'submitted' ] == 'Y' ) {
+        $saved = FALSE;
+        if( isset($_POST[ 'submitted' ]) && $_POST[ 'submitted' ] == 'y' ) {
             // grab the new data and save it
             $this->juxta_url = $_POST[ $this->opt_name ];
             update_option( $this->opt_name, $this->juxta_url );
-            
-            // show happy message       
-            echo '<div id="message"><p> -- Juxta Commons Sharing settings saved -- </p></div>';
+            $saved = TRUE;
         } 
 
         // show the settings form:
@@ -89,6 +88,7 @@ class Juxta {
         </p>
         <p class="submit">
             <input type="submit" name="Submit" class="button-primary" value="<?php esc_attr_e('Save Changes') ?>" />
+            <?php if ($saved==TRUE) echo("<span style='margin-left: 10px;font-style:italic;color:#aaa'>Juxta Commons Sharing settings have been saved</span>"); ?>
         </p>
     </form>
 </div>
