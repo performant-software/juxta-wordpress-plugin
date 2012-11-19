@@ -3,7 +3,7 @@
 Plugin Name: Juxta
 Plugin URI: http://juxta-staging.performantsoftware.com
 Description: Allow easy embedding of a Juxta Commons shared ressource. Format: [jx key]
-Author: Lou Foster
+Author: Performant Software
 Version: 1.0
 Author URI: http://www.performantsoftware.com
 */
