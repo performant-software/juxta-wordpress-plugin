@@ -29,7 +29,7 @@ class Juxta {
         // load in the settings:
         $this->juxta_url = get_option( $this->opt_name );
         if ( strlen($this->juxta_url) == 0 ) {
-            $this->juxta_url = "http://juxta-staging.performantsoftware.com";
+            $this->juxta_url = "http://juxtacommons.org";
         }
         
     }
